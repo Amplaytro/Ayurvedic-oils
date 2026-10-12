@@ -71,7 +71,9 @@ function connect(url) {
   await cdp.send('Emulation.setDeviceMetricsOverride', {
     width: w, height: h, deviceScaleFactor: 2, mobile: w < 900
   });
-  await cdp.send('Page.navigate', { url: BASE + page });
+  // VEDARA_URL overrides the local base, e.g. to shoot the deployed site.
+  const target = process.env.VEDARA_URL || (BASE + page);
+  await cdp.send('Page.navigate', { url: target });
   await sleep(2200);
 
   const scrollY = Number(process.argv[6] || 0);
