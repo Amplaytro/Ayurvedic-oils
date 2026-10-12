@@ -22,25 +22,19 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      # Turns Pages on if it has not been enabled yet. Tolerates failure so
-      # the workflow still succeeds on a repository where Pages is already on.
-      - name: Enable Pages
-        id: enable-pages
-        continue-on-error: true
-        uses: actions/enable-pages@v5
-
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Configure Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
+          # Static site with no build step, so the repository is the artifact.
           path: .
           retention-days: 1
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
