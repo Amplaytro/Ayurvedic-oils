@@ -50,22 +50,30 @@ function loadRazorpayScript() {
 }
 
 async function api(path, options = {}) {
-  const res = await fetch(API_BASE + path, {
-    method: options.method || 'GET',
-    headers: { 'Content-Type': 'application/json', ...(options.headers || {}) },
-    body: options.body ? JSON.stringify(options.body) : undefined
-  });
+  let res;
+  try {
+    res = await fetch(API_BASE + path, {
+      method: options.method || 'GET',
+      headers: { 'Content-Type': 'application/json', ...(options.headers || {}) },
+      body: options.body ? JSON.stringify(options.body) : undefined
+    });
+  } catch {
+    // Network/CORS failure — the API host is unreachable.
+    const err = new Error('The payment service could not be reached.');
+    err.code = 'unreachable';
+    throw err;
+  }
 
   let data = {};
   try {
     data = await res.json();
   } catch {
-    /* a non-JSON error page */
+    /* a non-JSON error page, e.g. the static host answering /api/* with 404 */
   }
 
   if (!res.ok) {
     const err = new Error(data.detail || data.error || `Request failed (${res.status})`);
-    err.code = data.error;
+    err.code = data.error || `http_${res.status}`;
     throw err;
   }
   return data;
@@ -150,12 +158,17 @@ async function beginCheckout() {
       body: { lines: detailed().map(({ id, variant, qty }) => ({ id, variant, qty })) }
     });
   } catch (err) {
-    if (err.code === 'payments_not_configured') {
-      toast('Payments are not configured yet');
-      return;
-    }
     console.error('[vedara] order creation failed:', err);
-    toast(err.message || 'Could not start the payment. Please try again.');
+
+    // Translate failures into something a customer can act on, rather than
+    // surfacing "Request failed (404)" when the API is not deployed.
+    if (err.code === 'invalid_cart') {
+      toast('Your basket could not be priced. Please review it and try again.');
+    } else if (err.code === 'payments_not_configured') {
+      toast('Payments are being set up — please contact us to order.');
+    } else {
+      toast('Checkout is unavailable right now. Please contact us to order.');
+    }
     return;
   }
 
