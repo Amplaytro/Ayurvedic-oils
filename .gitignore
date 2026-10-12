@@ -1,0 +1,23 @@
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Environment / secrets
+.env
+.env.local
+
+# Node (only if you later add tooling)
+node_modules/
+npm-debug.log*
+
+# Build / deploy output
+dist/
+build/
+.vercel/
+.netlify/

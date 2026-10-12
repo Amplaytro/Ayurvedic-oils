@@ -1,0 +1,87 @@
+<svg viewBox="0 0 200 240" width="200" height="240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sandalwood (Santalum album), a slender branch with opposite smooth glossy oval leaves, a cluster of tiny four-pointed star flowers and small round nuts" fill="none" stroke="#2E4034" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="100" cy="120" r="88" fill="#F3EDE1" stroke="none"/>
+<g transform="translate(0 -10)">
+  <!-- branch -->
+  <path d="M92 202 C95 188 98 176 100 164 C103 152 106 146 110 124 C112 112 114 102 114 92 C116 82 117 74 118 58"/>
+  <!-- opposite oval leaves -->
+  <g transform="translate(95 186) rotate(205)">
+    <path d="M0,0 C12,-14 30,-17 41,-6 C47,2 35,13 18,14 C9,14 3,8 0,0 Z"/>
+    <path d="M3,1 C15,-3 29,-5 39,-5"/>
+    <path d="M11,-8.5 C20,-12 29,-12.5 34,-10"/>
+  </g>
+  <g transform="translate(95 186) rotate(-25)">
+    <path d="M0,0 C12,-14 30,-17 41,-6 C47,2 35,13 18,14 C9,14 3,8 0,0 Z"/>
+    <path d="M3,1 C15,-3 29,-5 39,-5"/>
+    <path d="M11,-8.5 C20,-12 29,-12.5 34,-10"/>
+  </g>
+  <g transform="translate(100 164) rotate(202) scale(0.92)">
+    <path d="M0,0 C12,-14 30,-17 41,-6 C47,2 35,13 18,14 C9,14 3,8 0,0 Z"/>
+    <path d="M3,1 C15,-3 29,-5 39,-5"/>
+    <path d="M11,-8.5 C20,-12 29,-12.5 34,-10"/>
+  </g>
+  <g transform="translate(100 164) rotate(-22) scale(0.92)">
+    <path d="M0,0 C12,-14 30,-17 41,-6 C47,2 35,13 18,14 C9,14 3,8 0,0 Z"/>
+    <path d="M3,1 C15,-3 29,-5 39,-5"/>
+    <path d="M11,-8.5 C20,-12 29,-12.5 34,-10"/>
+  </g>
+  <g transform="translate(106 139) rotate(199) scale(0.84)">
+    <path d="M0,0 C12,-14 30,-17 41,-6 C47,2 35,13 18,14 C9,14 3,8 0,0 Z"/>
+    <path d="M3,1 C15,-3 29,-5 39,-5"/>
+    <path d="M11,-8.5 C20,-12 29,-12.5 34,-10"/>
+  </g>
+  <g transform="translate(106 139) rotate(-19) scale(0.84)">
+    <path d="M0,0 C12,-14 30,-17 41,-6 C47,2 35,13 18,14 C9,14 3,8 0,0 Z"/>
+    <path d="M3,1 C15,-3 29,-5 39,-5"/>
+    <path d="M11,-8.5 C20,-12 29,-12.5 34,-10"/>
+  </g>
+  <g transform="translate(110 124) rotate(196) scale(0.76)">
+    <path d="M0,0 C12,-14 30,-17 41,-6 C47,2 35,13 18,14 C9,14 3,8 0,0 Z"/>
+    <path d="M3,1 C15,-3 29,-5 39,-5"/>
+    <path d="M11,-8.5 C20,-12 29,-12.5 34,-10"/>
+  </g>
+  <g transform="translate(110 124) rotate(-16) scale(0.76)">
+    <path d="M0,0 C12,-14 30,-17 41,-6 C47,2 35,13 18,14 C9,14 3,8 0,0 Z"/>
+    <path d="M3,1 C15,-3 29,-5 39,-5"/>
+    <path d="M11,-8.5 C20,-12 29,-12.5 34,-10"/>
+  </g>
+  <g transform="translate(114 92) rotate(193) scale(0.66)">
+    <path d="M0,0 C12,-14 30,-17 41,-6 C47,2 35,13 18,14 C9,14 3,8 0,0 Z"/>
+    <path d="M3,1 C15,-3 29,-5 39,-5"/>
+    <path d="M11,-8.5 C20,-12 29,-12.5 34,-10"/>
+  </g>
+  <g transform="translate(114 92) rotate(-13) scale(0.66)">
+    <path d="M0,0 C12,-14 30,-17 41,-6 C47,2 35,13 18,14 C9,14 3,8 0,0 Z"/>
+    <path d="M3,1 C15,-3 29,-5 39,-5"/>
+    <path d="M11,-8.5 C20,-12 29,-12.5 34,-10"/>
+  </g>
+  <g transform="translate(117 68) rotate(189) scale(0.54)">
+    <path d="M0,0 C12,-14 30,-17 41,-6 C47,2 35,13 18,14 C9,14 3,8 0,0 Z"/>
+    <path d="M3,1 C15,-3 29,-5 39,-5"/>
+    <path d="M11,-8.5 C20,-12 29,-12.5 34,-10"/>
+  </g>
+  <g transform="translate(117 68) rotate(-9) scale(0.54)">
+    <path d="M0,0 C12,-14 30,-17 41,-6 C47,2 35,13 18,14 C9,14 3,8 0,0 Z"/>
+    <path d="M3,1 C15,-3 29,-5 39,-5"/>
+    <path d="M11,-8.5 C20,-12 29,-12.5 34,-10"/>
+  </g>
+  <!-- star-flower cluster -->
+  <path d="M114 84 C108 80 100 76 92 72"/>
+  <path d="M98,70 L94,72"/>
+  <path d="M94,74 L90,71"/>
+  <path d="M100,72 L103,76"/>
+  <path d="M0,-4.5 C0.7,-1.5 1.5,-0.7 4.5,0 C1.5,0.7 0.7,1.5 0,4.5 C-0.7,1.5 -1.5,0.7 -4.5,0 C-1.5,-0.7 -0.7,-1.5 0,-4.5 Z" transform="translate(92 72)"/>
+  <path d="M0,-4.5 C0.7,-1.5 1.5,-0.7 4.5,0 C1.5,0.7 0.7,1.5 0,4.5 C-0.7,1.5 -1.5,0.7 -4.5,0 C-1.5,-0.7 -0.7,-1.5 0,-4.5 Z" transform="translate(84 76)"/>
+  <path d="M0,-4.5 C0.7,-1.5 1.5,-0.7 4.5,0 C1.5,0.7 0.7,1.5 0,4.5 C-0.7,1.5 -1.5,0.7 -4.5,0 C-1.5,-0.7 -0.7,-1.5 0,-4.5 Z" transform="translate(98 67)"/>
+  <path d="M0,-4.5 C0.7,-1.5 1.5,-0.7 4.5,0 C1.5,0.7 0.7,1.5 0,4.5 C-0.7,1.5 -1.5,0.7 -4.5,0 C-1.5,-0.7 -0.7,-1.5 0,-4.5 Z" transform="translate(87 65)"/>
+  <path d="M0,-4.5 C0.7,-1.5 1.5,-0.7 4.5,0 C1.5,0.7 0.7,1.5 0,4.5 C-0.7,1.5 -1.5,0.7 -4.5,0 C-1.5,-0.7 -0.7,-1.5 0,-4.5 Z" transform="translate(96 79)"/>
+  <path d="M0,-4.5 C0.7,-1.5 1.5,-0.7 4.5,0 C1.5,0.7 0.7,1.5 0,4.5 C-0.7,1.5 -1.5,0.7 -4.5,0 C-1.5,-0.7 -0.7,-1.5 0,-4.5 Z" transform="translate(80 68)"/>
+  <path d="M0,-4.5 C0.7,-1.5 1.5,-0.7 4.5,0 C1.5,0.7 0.7,1.5 0,4.5 C-0.7,1.5 -1.5,0.7 -4.5,0 C-1.5,-0.7 -0.7,-1.5 0,-4.5 Z" transform="translate(103 76)"/>
+  <!-- small round nuts -->
+  <path d="M80,88 C77,91 75,94 74,97"/>
+  <circle cx="72" cy="101" r="4.5"/>
+  <circle cx="72" cy="101" r="1.6" fill="#C08A3E" stroke="none"/>
+  <path d="M88,82 C85,85 83,88 82,91"/>
+  <circle cx="80" cy="95" r="4"/>
+  <circle cx="80" cy="95" r="1.4" fill="#C08A3E" stroke="none"/>
+</g>
+</svg>

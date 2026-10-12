@@ -1,0 +1,104 @@
+<svg viewBox="0 0 200 240" width="200" height="240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Amla or Indian gooseberry (Phyllanthus emblica), a thin branch with many small oval leaves and two round fruits marked with subtle vertical striping" fill="none" stroke="#2E4034" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="100" cy="120" r="88" fill="#F3EDE1" stroke="none"/>
+<g transform="translate(0 -18)">
+  <!-- thin branch -->
+  <path d="M56 194 C76 176 94 156 112 134 C126 118 140 98 152 78"/>
+  <!-- small oval leaves along the branch -->
+  <g transform="translate(64 186) rotate(-148)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+  <g transform="translate(71 180) rotate(-142)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+  <g transform="translate(78 172) rotate(-146)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+  <g transform="translate(85 164) rotate(-140)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+  <g transform="translate(92 157) rotate(-145)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+  <g transform="translate(99 150) rotate(-138)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+  <g transform="translate(106 142) rotate(-135)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+  <g transform="translate(113 134) rotate(34)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+  <g transform="translate(118 126) rotate(-142)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+  <g transform="translate(124 119) rotate(30)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+  <g transform="translate(130 112) rotate(-147)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+  <g transform="translate(135 104) rotate(26) scale(0.85)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+  <g transform="translate(140 96) rotate(-150) scale(0.9)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+  <g transform="translate(146 88) rotate(24) scale(0.8)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+  <g transform="translate(149 80) rotate(-152) scale(0.7)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+  <g transform="translate(145 86) rotate(22) scale(0.7)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+  <!-- first fruit -->
+  <path d="M71,183 C74,185 77,187 79,188"/>
+  <circle cx="80" cy="192" r="11"/>
+  <path d="M76,183 C74,188 74,195 76,200"/>
+  <path d="M80,181 C78.5,187 78.5,196 80,202"/>
+  <path d="M84,183 C86,188 86,195 84,200"/>
+  <circle cx="80" cy="183" r="2" fill="#C08A3E" stroke="none"/>
+  <!-- second fruit -->
+  <path d="M100,152 C108,157 114,162 117,166"/>
+  <circle cx="121" cy="171" r="10"/>
+  <path d="M117,163 C115.5,167 115.5,174 117,178"/>
+  <path d="M121,161.5 C119.8,166 119.8,175 121,179.5"/>
+  <path d="M125,163 C126.5,167 126.5,174 125,178"/>
+  <circle cx="121" cy="163" r="1.8" fill="#C08A3E" stroke="none"/>
+  <!-- tiny leaf cluster -->
+  <path d="M131,110 C136,106 141,101 145,96"/>
+  <g transform="translate(134 107) rotate(25) scale(0.45)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+  <g transform="translate(139 103) rotate(-150) scale(0.45)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+  <g transform="translate(142 99) rotate(22) scale(0.42)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+  <g transform="translate(145 96) rotate(-150) scale(0.45)">
+    <path d="M0,0 C6,-8 14,-9 20,-2 C15,7 6,8 0,0 Z"/>
+    <path d="M2,0 C8,-2 14,-3 18,-2"/>
+  </g>
+</g>
+</svg>

@@ -1,0 +1,81 @@
+<svg viewBox="0 0 200 240" width="200" height="240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ashwagandha (Withania somnifera), a slightly hairy upright stem with broad ovate leaves, a cluster of tiny five-petalled flowers and one round berry" fill="none" stroke="#2E4034" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="100" cy="120" r="88" fill="#F3EDE1" stroke="none"/>
+<g transform="translate(0 -17)">
+  <!-- stem -->
+  <path d="M97 204 C95 184 102 166 100 146 C98 128 102 112 101 94"/>
+  <!-- fine stem hairs -->
+  <path d="M96,196 L90,192"/>
+  <path d="M96,182 L90,178"/>
+  <path d="M99,168 L93,164"/>
+  <path d="M101,154 L107,150"/>
+  <path d="M99,140 L93,136"/>
+  <path d="M101,126 L107,122"/>
+  <path d="M101,112 L95,108"/>
+  <!-- broad ovate leaves -->
+  <g transform="translate(97 191) rotate(212) scale(1.1)">
+    <path d="M0,0 C9,-16 28,-21 44,-3 C30,17 12,16 0,0 Z"/>
+    <path d="M3,0 C15,-5 29,-6 41,-4"/>
+  </g>
+  <g transform="translate(103 191) rotate(-32) scale(1.1)">
+    <path d="M0,0 C9,-16 28,-21 44,-3 C30,17 12,16 0,0 Z"/>
+    <path d="M3,0 C15,-5 29,-6 41,-4"/>
+  </g>
+  <g transform="translate(100 160) rotate(206) scale(0.92)">
+    <path d="M0,0 C9,-16 28,-21 44,-3 C30,17 12,16 0,0 Z"/>
+    <path d="M3,0 C15,-5 29,-6 41,-4"/>
+  </g>
+  <g transform="translate(102 160) rotate(-26) scale(0.92)">
+    <path d="M0,0 C9,-16 28,-21 44,-3 C30,17 12,16 0,0 Z"/>
+    <path d="M3,0 C15,-5 29,-6 41,-4"/>
+  </g>
+  <g transform="translate(100 134) rotate(202) scale(0.85)">
+    <path d="M0,0 C9,-16 28,-21 44,-3 C30,17 12,16 0,0 Z"/>
+    <path d="M3,0 C15,-5 29,-6 41,-4"/>
+  </g>
+  <g transform="translate(102 134) rotate(-22) scale(0.85)">
+    <path d="M0,0 C9,-16 28,-21 44,-3 C30,17 12,16 0,0 Z"/>
+    <path d="M3,0 C15,-5 29,-6 41,-4"/>
+  </g>
+  <g transform="translate(101 112) rotate(198) scale(0.66)">
+    <path d="M0,0 C9,-16 28,-21 44,-3 C30,17 12,16 0,0 Z"/>
+    <path d="M3,0 C15,-5 29,-6 41,-4"/>
+  </g>
+  <g transform="translate(101 112) rotate(-18) scale(0.66)">
+    <path d="M0,0 C9,-16 28,-21 44,-3 C30,17 12,16 0,0 Z"/>
+    <path d="M3,0 C15,-5 29,-6 41,-4"/>
+  </g>
+  <!-- small flower cluster -->
+  <path d="M101,96 C97,94 91,90 85,86"/>
+  <path d="M101,96 C105,92 110,87 115,82"/>
+  <path d="M101,96 C101,88 100,80 99,74"/>
+  <g transform="translate(85 86)">
+    <path d="M0,-0.8 C-1.1,-2 -0.9,-3.4 0,-4 C0.9,-3.4 1.1,-2 0,-0.8 Z"/>
+    <path d="M0,-0.8 C-1.1,-2 -0.9,-3.4 0,-4 C0.9,-3.4 1.1,-2 0,-0.8 Z" transform="rotate(72)"/>
+    <path d="M0,-0.8 C-1.1,-2 -0.9,-3.4 0,-4 C0.9,-3.4 1.1,-2 0,-0.8 Z" transform="rotate(144)"/>
+    <path d="M0,-0.8 C-1.1,-2 -0.9,-3.4 0,-4 C0.9,-3.4 1.1,-2 0,-0.8 Z" transform="rotate(216)"/>
+    <path d="M0,-0.8 C-1.1,-2 -0.9,-3.4 0,-4 C0.9,-3.4 1.1,-2 0,-0.8 Z" transform="rotate(288)"/>
+    <circle cx="0" cy="0" r="1.2" fill="#C08A3E" stroke="none"/>
+  </g>
+  <g transform="translate(115 82)">
+    <path d="M0,-0.8 C-1.1,-2 -0.9,-3.4 0,-4 C0.9,-3.4 1.1,-2 0,-0.8 Z"/>
+    <path d="M0,-0.8 C-1.1,-2 -0.9,-3.4 0,-4 C0.9,-3.4 1.1,-2 0,-0.8 Z" transform="rotate(72)"/>
+    <path d="M0,-0.8 C-1.1,-2 -0.9,-3.4 0,-4 C0.9,-3.4 1.1,-2 0,-0.8 Z" transform="rotate(144)"/>
+    <path d="M0,-0.8 C-1.1,-2 -0.9,-3.4 0,-4 C0.9,-3.4 1.1,-2 0,-0.8 Z" transform="rotate(216)"/>
+    <path d="M0,-0.8 C-1.1,-2 -0.9,-3.4 0,-4 C0.9,-3.4 1.1,-2 0,-0.8 Z" transform="rotate(288)"/>
+    <circle cx="0" cy="0" r="1.2"/>
+  </g>
+  <g transform="translate(99 74)">
+    <path d="M0,-0.8 C-1.1,-2 -0.9,-3.4 0,-4 C0.9,-3.4 1.1,-2 0,-0.8 Z"/>
+    <path d="M0,-0.8 C-1.1,-2 -0.9,-3.4 0,-4 C0.9,-3.4 1.1,-2 0,-0.8 Z" transform="rotate(72)"/>
+    <path d="M0,-0.8 C-1.1,-2 -0.9,-3.4 0,-4 C0.9,-3.4 1.1,-2 0,-0.8 Z" transform="rotate(144)"/>
+    <path d="M0,-0.8 C-1.1,-2 -0.9,-3.4 0,-4 C0.9,-3.4 1.1,-2 0,-0.8 Z" transform="rotate(216)"/>
+    <path d="M0,-0.8 C-1.1,-2 -0.9,-3.4 0,-4 C0.9,-3.4 1.1,-2 0,-0.8 Z" transform="rotate(288)"/>
+    <circle cx="0" cy="0" r="1.2"/>
+  </g>
+  <!-- single berry -->
+  <path d="M100,100 C94,98 89,94 86,91"/>
+  <circle cx="83" cy="87" r="6" fill="#C08A3E" stroke="none"/>
+  <path d="M79,82.5 C81,80.5 85,80.5 87,82.5"/>
+  <path d="M83,81.5 L83,78.5"/>
+</g>
+</svg>

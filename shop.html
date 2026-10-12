@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Browse All Oils — Vedara</title>
+<meta name="description" content="Browse all eight Vedara Ayurvedic oils. Filter by hair, skin, body and calm — and by what you actually need.">
+<meta name="theme-color" content="#2E4034">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%232E4034'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' fill='%23B3873C' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<div class="topbar">Complimentary shipping on orders over $60 &nbsp;·&nbsp; <strong>Winter ritual: 15% off your first bottle</strong></div>
+
+<!-- ===================== Header ===================== -->
+<header class="header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Vedara home">
+      <span class="brand__mark">V</span>
+      <span>
+        <span class="brand__name">Vedara</span>
+        <span class="brand__tag">Ayurvedic Oils</span>
+      </span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link" data-nav href="shop.html">Browse</a>
+      <a class="nav__link" data-nav href="index.html#botanicals">Ingredients</a>
+      <a class="nav__link" data-nav href="index.html#ritual">The Ritual</a>
+      <a class="nav__link" data-nav href="index.html#reviews">Reviews</a>
+      <a class="nav__link" data-nav href="index.html#faq">FAQ</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="icon-btn" type="button" data-cart-toggle aria-expanded="false" aria-label="Open basket">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count" data-cart-count>0</span>
+      </button>
+      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== Mobile nav ===================== -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+  <div class="mobile-nav__top">
+    <span class="brand__name" style="font-size:1.2rem">Vedara</span>
+    <button class="icon-btn" type="button" onclick="closeMobileNav()" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <a class="m-link" href="shop.html">Browse All Oils <span>01</span></a>
+  <a class="m-link" href="index.html#botanicals">Ingredients <span>02</span></a>
+  <a class="m-link" href="index.html#ritual">The Ritual <span>03</span></a>
+  <a class="m-link" href="index.html#reviews">Reviews <span>04</span></a>
+  <a class="m-link" href="index.html#faq">FAQ <span>05</span></a>
+  <a class="btn btn--block" href="shop.html" style="margin-top:28px">Shop the collection</a>
+</nav>
+
+<main>
+
+<!-- ===================== Page head ===================== -->
+<section class="pagehead">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><span class="cur">Browse</span>
+    </nav>
+    <span class="eyebrow">The collection</span>
+    <h1 style="margin-top:14px">Browse the oils.</h1>
+    <p class="lede">Eight blends, each built around a classical formulation. Filter by what you need, or start with a single bottle and a nightly ritual.</p>
+  </div>
+</section>
+
+<!-- ===================== Shop ===================== -->
+<section class="section">
+  <div class="wrap shop-layout">
+
+    <!-- Filters -->
+    <aside class="filters" id="filtersPanel" aria-label="Product filters">
+      <div class="fgroup">
+        <div class="fgroup__head">
+          <h2 class="fgroup__title" style="border:0;padding:0;margin:0">Filter</h2>
+          <button class="filters__reset" type="button" id="resetFilters">Clear all</button>
+        </div>
+      </div>
+
+      <div class="fgroup">
+        <h3 class="fgroup__title">Category</h3>
+        <div class="checks" id="fCategory"></div>
+      </div>
+
+      <div class="fgroup">
+        <h3 class="fgroup__title">Concern</h3>
+        <div class="checks" id="fConcern"></div>
+      </div>
+
+      <div class="fgroup">
+        <h3 class="fgroup__title">Skin type</h3>
+        <div class="checks" id="fSkin"></div>
+      </div>
+
+      <div class="fgroup">
+        <h3 class="fgroup__title">Price</h3>
+        <div class="checks" id="fPrice"></div>
+      </div>
+    </aside>
+
+    <!-- Results -->
+    <div>
+      <div class="shop-bar">
+        <div class="shop-bar__left">
+          <button class="filters-fab" type="button" id="openFilters" aria-controls="filtersPanel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 6h18M6 12h12M10 18h4"/></svg>
+            Filters <span class="n" id="fabCount"></span>
+          </button>
+          <p class="shop-bar__count" id="resultCount"></p>
+        </div>
+        <label style="display:flex;align-items:center;gap:10px">
+          <span class="shop-bar__count" style="letter-spacing:.16em;text-transform:uppercase;font-size:.66rem">Sort</span>
+          <select id="sortBy" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="rating">Highest rated</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+            <option value="name">A – Z</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="chips" id="activeChips"></div>
+      <div class="grid-products" id="results"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== Cross-sell ===================== -->
+<section class="section-tight" style="background:var(--paper-warm);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="split">
+      <div class="split__copy" data-reveal>
+        <span class="eyebrow">Not sure which one?</span>
+        <h2>Start with one bottle.</h2>
+        <p class="lede">Adding three oils at once means you will not know which one is working. Choose the single blend that matches your biggest complaint, use it nightly for three weeks, then decide.</p>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Shedding or a flaky scalp?</b> Brahmi &amp; Bhringraj Scalp Oil.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Congested or blemish-prone?</b> Tulsi Neem Clarifying Oil.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Dry, tight or aching?</b> Kansa Ayurvedic Body Oil.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Wound up at night?</b> Ashwagandha Night Oil.</span></li>
+        </ul>
+        <a class="link" href="index.html#faq">Read the full FAQ <span class="arw">&rarr;</span></a>
+      </div>
+      <div class="split__art" data-reveal>
+        <img src="assets/img/aloe.svg" alt="Aloe vera — Kumari, the cooling herb" width="200" height="240">
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== Footer ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <span class="brand__mark">V</span>
+          <span>
+            <span class="brand__name">Vedara</span>
+            <span class="brand__tag">Ayurvedic Oils</span>
+          </span>
+        </a>
+        <p>Cold-pressed, slow-steeped Ayurvedic oils. Made in a GMP-certified facility in Kerala, and formulated to classical Sanskrit texts.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.2-5.1s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.9 0 1.3.6 1.3 1.4 0 .9-.6 2.2-.9 3.4-.2 1 .5 1.8 1.5 1.8 1.9 0 3.2-2.4 3.2-5.2 0-2.2-1.5-3.8-4.1-3.8a4.7 4.7 0 0 0-4.9 4.7c0 .9.3 1.5.8 2 .1.1.1.2.1.3l-.3 1c0 .2-.2.3-.4.2-1.2-.5-1.8-1.9-1.8-3.5 0-2.6 2.2-5.7 6.6-5.7 3.5 0 5.8 2.5 5.8 5.3 0 3.6-2 6.3-5 6.3-1 0-1.9-.5-2.2-1.2l-.6 2.4c-.2.8-.7 1.7-1.1 2.3A10 10 0 1 0 12 2z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5>Shop</h5>
+        <ul>
+          <li><a href="shop.html">All oils</a></li>
+          <li><a href="shop.html?cat=hair">Hair &amp; scalp</a></li>
+          <li><a href="shop.html?cat=skin">Skin &amp; face</a></li>
+          <li><a href="shop.html?cat=body">Body &amp; massage</a></li>
+          <li><a href="shop.html?cat=calm">Calm &amp; sleep</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Learn</h5>
+        <ul>
+          <li><a href="index.html#botanicals">The botanicals</a></li>
+          <li><a href="index.html#ritual">The method</a></li>
+          <li><a href="index.html#faq">Shipping &amp; returns</a></li>
+          <li><a href="index.html#faq">Ingredients guide</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:care@vedara.com">care@vedara.com</a></li>
+          <li><a href="tel:+18005550142">+1 800 555 0142</a></li>
+          <li><a href="#">Mon–Sat, 9–6 IST</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span data-year>2026</span> Vedara Ayurveda. All rights reserved.</p>
+      <nav aria-label="Legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Shipping policy</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== Cart drawer ===================== -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping basket" aria-hidden="true">
+  <div class="drawer__head">
+    <h2>Your Basket <span data-cart-count>0</span></h2>
+    <button class="icon-btn" type="button" data-cart-close aria-label="Close basket">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__ship" data-cart-ship></div>
+  <div class="drawer__body" data-cart-body></div>
+  <div class="drawer__foot" data-cart-foot>
+    <div class="totals" data-cart-totals></div>
+    <button class="btn btn--block" type="button" data-checkout>Proceed to checkout</button>
+    <p class="secure">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      Secure checkout · 30-day returns
+    </p>
+  </div>
+</aside>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/shop.js"></script>
+</body>
+</html>

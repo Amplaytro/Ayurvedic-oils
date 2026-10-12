@@ -1,0 +1,79 @@
+<svg viewBox="0 0 200 240" width="200" height="240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bhringraj (Eclipta alba), king of herbs, with an upright stem, long lance leaves and a white daisy-like flower head" fill="none" stroke="#2E4034" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="100" cy="120" r="88" fill="#F3EDE1" stroke="none"/>
+  <!-- stem -->
+  <path d="M100 204 C98 184 102 164 100 146 C98 128 102 110 100 88"/>
+  <!-- long lance-shaped leaves -->
+  <g transform="translate(98 190) rotate(208)">
+    <path d="M0,0 C16,-12 36,-15 52,0 C36,12 16,11 0,0 Z"/>
+    <path d="M3,0 C18,-6 36,-7 50,-1"/>
+  </g>
+  <g transform="translate(102 190) rotate(-28)">
+    <path d="M0,0 C16,-12 36,-15 52,0 C36,12 16,11 0,0 Z"/>
+    <path d="M3,0 C18,-6 36,-7 50,-1"/>
+  </g>
+  <g transform="translate(100 150) rotate(204) scale(0.85)">
+    <path d="M0,0 C16,-12 36,-15 52,0 C36,12 16,11 0,0 Z"/>
+    <path d="M3,0 C18,-6 36,-7 50,-1"/>
+  </g>
+  <g transform="translate(100 150) rotate(-24) scale(0.85)">
+    <path d="M0,0 C16,-12 36,-15 52,0 C36,12 16,11 0,0 Z"/>
+    <path d="M3,0 C18,-6 36,-7 50,-1"/>
+  </g>
+  <g transform="translate(100 124) rotate(200) scale(0.62)">
+    <path d="M0,0 C16,-12 36,-15 52,0 C36,12 16,11 0,0 Z"/>
+    <path d="M3,0 C18,-6 36,-7 50,-1"/>
+  </g>
+  <g transform="translate(100 124) rotate(-20) scale(0.62)">
+    <path d="M0,0 C16,-12 36,-15 52,0 C36,12 16,11 0,0 Z"/>
+    <path d="M3,0 C18,-6 36,-7 50,-1"/>
+  </g>
+  <!-- calyx -->
+  <path d="M90 82 C94 90 106 90 110 82"/>
+  <path d="M93 84 L91 91"/>
+  <path d="M100 86 L100 93"/>
+  <path d="M107 84 L109 91"/>
+  <!-- composite flower head -->
+  <g transform="translate(100 60)">
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z"/>
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z" transform="rotate(18)"/>
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z" transform="rotate(36)"/>
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z" transform="rotate(54)"/>
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z" transform="rotate(72)"/>
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z" transform="rotate(90)"/>
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z" transform="rotate(108)"/>
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z" transform="rotate(126)"/>
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z" transform="rotate(144)"/>
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z" transform="rotate(162)"/>
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z" transform="rotate(180)"/>
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z" transform="rotate(198)"/>
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z" transform="rotate(216)"/>
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z" transform="rotate(234)"/>
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z" transform="rotate(252)"/>
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z" transform="rotate(270)"/>
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z" transform="rotate(288)"/>
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z" transform="rotate(306)"/>
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z" transform="rotate(324)"/>
+    <path d="M0,-2.4 C-1.8,-9 -1.7,-19 0,-25 C1.7,-19 1.8,-9 0,-2.4 Z" transform="rotate(342)"/>
+    <circle cx="0" cy="0" r="8.5"/>
+    <circle cx="0" cy="0" r="5" fill="#C08A3E" stroke="none"/>
+    <circle cx="-2.6" cy="-2.2" r="1.1"/>
+    <circle cx="2.8" cy="-0.6" r="1.1"/>
+    <circle cx="0.4" cy="3" r="1.1"/>
+  </g>
+  <!-- buds -->
+  <path d="M99 112 C94 110 90 107 87 104"/>
+  <g transform="translate(87 104)">
+    <path d="M0,0 C-3.4,-2 -3.4,-7 0,-9.5 C3.4,-7 3.4,-2 0,0 Z"/>
+    <path d="M-2.5,-1 L-4.5,-5"/>
+  </g>
+  <path d="M101 104 C106 101 110 97 113 93"/>
+  <g transform="translate(113 93)">
+    <path d="M0,0 C-3.4,-2 -3.4,-7 0,-9.5 C3.4,-7 3.4,-2 0,0 Z"/>
+    <path d="M2.5,-1 L4.5,-5"/>
+  </g>
+  <path d="M100 96 C96 94 93 90 91 87"/>
+  <g transform="translate(91 87)">
+    <path d="M0,0 C-3.4,-2 -3.4,-7 0,-9.5 C3.4,-7 3.4,-2 0,0 Z"/>
+    <path d="M-2.5,-1 L-4.5,-5"/>
+  </g>
+</svg>

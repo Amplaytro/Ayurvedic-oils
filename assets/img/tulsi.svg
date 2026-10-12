@@ -1,0 +1,72 @@
+<svg viewBox="0 0 200 240" width="200" height="240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tulsi or holy basil (Ocimum sanctum), a vertical stem with paired serrated pointed leaves and a slender upright flower spike" fill="none" stroke="#2E4034" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="100" cy="120" r="88" fill="#F3EDE1" stroke="none"/>
+  <!-- stem -->
+  <path d="M100 204 C98 186 101 168 100 150 C99 134 101 118 100 102 C99 92 100 84 100 78"/>
+  <!-- serrated leaves, lower pair -->
+  <g transform="translate(98 190) rotate(208)">
+    <path d="M0,0 C4,-3 6,-5 9,-8 L11,-4 L17,-12 L19,-6 L26,-13 L28,-7 L34,-11 L36,-5 L43,0 L36,5 L34,11 L28,7 L26,13 L19,6 L17,12 L11,4 L9,8 C6,5 4,3 0,0 Z"/>
+    <path d="M2,-0.5 C12,-3 26,-3 38,-1"/>
+  </g>
+  <g transform="translate(102 190) rotate(-28)">
+    <path d="M0,0 C4,-3 6,-5 9,-8 L11,-4 L17,-12 L19,-6 L26,-13 L28,-7 L34,-11 L36,-5 L43,0 L36,5 L34,11 L28,7 L26,13 L19,6 L17,12 L11,4 L9,8 C6,5 4,3 0,0 Z"/>
+    <path d="M2,-0.5 C12,-3 26,-3 38,-1"/>
+  </g>
+  <!-- second pair -->
+  <g transform="translate(100 160) rotate(204) scale(0.95)">
+    <path d="M0,0 C4,-3 6,-5 9,-8 L11,-4 L17,-12 L19,-6 L26,-13 L28,-7 L34,-11 L36,-5 L43,0 L36,5 L34,11 L28,7 L26,13 L19,6 L17,12 L11,4 L9,8 C6,5 4,3 0,0 Z"/>
+    <path d="M2,-0.5 C12,-3 26,-3 38,-1"/>
+  </g>
+  <g transform="translate(100 160) rotate(-24) scale(0.95)">
+    <path d="M0,0 C4,-3 6,-5 9,-8 L11,-4 L17,-12 L19,-6 L26,-13 L28,-7 L34,-11 L36,-5 L43,0 L36,5 L34,11 L28,7 L26,13 L19,6 L17,12 L11,4 L9,8 C6,5 4,3 0,0 Z"/>
+    <path d="M2,-0.5 C12,-3 26,-3 38,-1"/>
+  </g>
+  <!-- third pair -->
+  <g transform="translate(100 132) rotate(200) scale(0.88)">
+    <path d="M0,0 C4,-3 6,-5 9,-8 L11,-4 L17,-12 L19,-6 L26,-13 L28,-7 L34,-11 L36,-5 L43,0 L36,5 L34,11 L28,7 L26,13 L19,6 L17,12 L11,4 L9,8 C6,5 4,3 0,0 Z"/>
+    <path d="M2,-0.5 C12,-3 26,-3 38,-1"/>
+  </g>
+  <g transform="translate(100 132) rotate(-20) scale(0.88)">
+    <path d="M0,0 C4,-3 6,-5 9,-8 L11,-4 L17,-12 L19,-6 L26,-13 L28,-7 L34,-11 L36,-5 L43,0 L36,5 L34,11 L28,7 L26,13 L19,6 L17,12 L11,4 L9,8 C6,5 4,3 0,0 Z"/>
+    <path d="M2,-0.5 C12,-3 26,-3 38,-1"/>
+  </g>
+  <!-- upper pair -->
+  <g transform="translate(100 108) rotate(196) scale(0.72)">
+    <path d="M0,0 C4,-3 6,-5 9,-8 L11,-4 L17,-12 L19,-6 L26,-13 L28,-7 L34,-11 L36,-5 L43,0 L36,5 L34,11 L28,7 L26,13 L19,6 L17,12 L11,4 L9,8 C6,5 4,3 0,0 Z"/>
+    <path d="M2,-0.5 C12,-3 26,-3 38,-1"/>
+  </g>
+  <g transform="translate(100 108) rotate(-16) scale(0.72)">
+    <path d="M0,0 C4,-3 6,-5 9,-8 L11,-4 L17,-12 L19,-6 L26,-13 L28,-7 L34,-11 L36,-5 L43,0 L36,5 L34,11 L28,7 L26,13 L19,6 L17,12 L11,4 L9,8 C6,5 4,3 0,0 Z"/>
+    <path d="M2,-0.5 C12,-3 26,-3 38,-1"/>
+  </g>
+  <!-- flower spike -->
+  <path d="M100 78 C99 66 100 56 101 46"/>
+  <g transform="translate(100 70)">
+    <path d="M0,-1 C-2,-2.4 -4.6,-2.8 -6.2,-1.8 C-4.8,-0.4 -2,-0.2 0,-1 Z"/>
+    <path d="M0,1 C-2,2.4 -4.6,2.8 -6.2,1.8 C-4.8,0.4 -2,0.2 0,1 Z"/>
+    <path d="M0,-1 C-2,-2.4 -4.6,-2.8 -6.2,-1.8 C-4.8,-0.4 -2,-0.2 0,-1 Z" transform="scale(-1 1)"/>
+    <path d="M0,1 C-2,2.4 -4.6,2.8 -6.2,1.8 C-4.8,0.4 -2,0.2 0,1 Z" transform="scale(-1 1)"/>
+    <circle cx="0" cy="0" r="1.6" fill="#C08A3E" stroke="none"/>
+  </g>
+  <g transform="translate(100 63) scale(0.9)">
+    <path d="M0,-1 C-2,-2.4 -4.6,-2.8 -6.2,-1.8 C-4.8,-0.4 -2,-0.2 0,-1 Z"/>
+    <path d="M0,1 C-2,2.4 -4.6,2.8 -6.2,1.8 C-4.8,0.4 -2,0.2 0,1 Z"/>
+    <path d="M0,-1 C-2,-2.4 -4.6,-2.8 -6.2,-1.8 C-4.8,-0.4 -2,-0.2 0,-1 Z" transform="scale(-1 1)"/>
+    <path d="M0,1 C-2,2.4 -4.6,2.8 -6.2,1.8 C-4.8,0.4 -2,0.2 0,1 Z" transform="scale(-1 1)"/>
+  </g>
+  <g transform="translate(100 56) scale(0.8)">
+    <path d="M0,-1 C-2,-2.4 -4.6,-2.8 -6.2,-1.8 C-4.8,-0.4 -2,-0.2 0,-1 Z"/>
+    <path d="M0,1 C-2,2.4 -4.6,2.8 -6.2,1.8 C-4.8,0.4 -2,0.2 0,1 Z"/>
+    <path d="M0,-1 C-2,-2.4 -4.6,-2.8 -6.2,-1.8 C-4.8,-0.4 -2,-0.2 0,-1 Z" transform="scale(-1 1)"/>
+    <path d="M0,1 C-2,2.4 -4.6,2.8 -6.2,1.8 C-4.8,0.4 -2,0.2 0,1 Z" transform="scale(-1 1)"/>
+    <circle cx="0" cy="0" r="1.4" fill="#C08A3E" stroke="none"/>
+  </g>
+  <g transform="translate(100 49) scale(0.68)">
+    <path d="M0,-1 C-2,-2.4 -4.6,-2.8 -6.2,-1.8 C-4.8,-0.4 -2,-0.2 0,-1 Z"/>
+    <path d="M0,1 C-2,2.4 -4.6,2.8 -6.2,1.8 C-4.8,0.4 -2,0.2 0,1 Z"/>
+    <path d="M0,-1 C-2,-2.4 -4.6,-2.8 -6.2,-1.8 C-4.8,-0.4 -2,-0.2 0,-1 Z" transform="scale(-1 1)"/>
+    <path d="M0,1 C-2,2.4 -4.6,2.8 -6.2,1.8 C-4.8,0.4 -2,0.2 0,1 Z" transform="scale(-1 1)"/>
+  </g>
+  <!-- terminal bud -->
+  <path d="M101 46 C100 44 100 42 101 41"/>
+  <path d="M101,41 C97.6,39.6 97,36 99.4,34.2 C101.8,32.4 104.4,34.6 104,37.6 C103.6,39.8 102.4,40.8 101,41 Z"/>
+</svg>

@@ -1,0 +1,8 @@
+# Normalise line endings so the repo (and any deploy) is consistent
+* text=auto
+
+*.js   text eol=lf
+*.css  text eol=lf
+*.html text eol=lf
+*.svg  text eol=lf
+*.md   text eol=lf
