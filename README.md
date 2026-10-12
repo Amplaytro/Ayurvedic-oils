@@ -8,11 +8,15 @@ and it runs.
 index.html      Home — hero, collection, botanicals, method, reviews, FAQ
 shop.html       Browse — faceted filters, sorting, URL-synced state
 product.html    Product detail, rendered from ?id=<productId>
+server/
+  index.js      Payments API — orders, verification, webhook (+ static files)
+  catalog.js    Server-side pricing, loaded from the same data.js the UI uses
 assets/
   css/style.css Design system + every component
   img/*.svg     10 hand-built botanical line-art illustrations
   js/data.js    Catalogue: products, ingredients, FAQs, sizes, store config
   js/cart.js    Cart engine — storage, drawer, badges, toasts
+  js/checkout.js Razorpay Checkout flow
   js/ui.js      Shared UI — header, reveal, accordions, card renderers
   js/home.js    Home page wiring
   js/shop.js    Filter / sort engine
@@ -21,12 +25,15 @@ assets/
 
 ## Running it
 
-Opening `index.html` directly works, but a local server is better (avoids
-`file://` quirks and makes the product page query string behave consistently):
+Opening `index.html` directly works for browsing, but the cart drawer needs an
+origin, so run a server:
 
 ```powershell
+# browsable without payments
 python -m http.server 8000
-# then open http://localhost:8000
+
+# or the full app including the payments API
+node server/index.js      # http://localhost:3000
 ```
 
 ## What's included
@@ -65,40 +72,119 @@ Prices scale automatically across the three sizes (Trial / Standard / Ritual)
 via the multipliers in `SIZES`. The size a product defaults to is inferred
 from its `volume` string, so `volume: "200 ml / 6.76 fl oz"` opens on Ritual.
 
-## Wiring up payments
+## Payments (Razorpay)
 
-`data-checkout` in `cart.js` is the single integration point — it currently
-shows a confirmation toast. Replace that handler with a redirect to Stripe
-Checkout, Shopify's cart permalink, or your own backend:
+The checkout button runs a real Razorpay Checkout flow. **The secret key never
+reaches the browser** — order creation, signature verification and webhooks all
+happen in `server/`.
 
-```js
-document.addEventListener("click", (e) => {
-  if (!e.target.closest("[data-checkout]")) return;
-  fetch("/api/checkout", {
-    method: "POST",
-    body: JSON.stringify(detailed().map(({ id, variant, qty }) => ({ id, variant, qty })))
-  }).then(r => r.json()).then(({ url }) => { location.href = url; });
-});
 ```
+Browser  ──POST /api/orders (ids only)──▶  server  ──Razorpay /v1/orders──▶  Razorpay
+        ◀──order_id + public key_id──────┘
+        ──Razorpay Checkout UI (card / UPI / netbanking)──▶
+        ──POST /api/verify (signature)──▶  server verifies + confirms capture
+```
+
+### Setup
+
+1. Get your keys from **Razorpay Dashboard → Settings → API Keys**. Test keys
+   begin `rzp_test_`. No account yet? Razorpay's test flow works with keys
+   generated from a test-mode account.
+2. Create a local `.env` (see `.env.example`) and fill in `RAZORPAY_KEY_ID` and
+   `RAZORPAY_KEY_SECRET`. `.env` is git-ignored.
+3. Start the server and confirm:
+   ```powershell
+   node server/index.js
+   curl http://localhost:3000/health      # {"ok":true,"payments":true}
+   ```
+4. Optional but recommended — add a webhook in the dashboard pointing at
+   `https://your-api-host/api/webhook`, subscribe to `payment.captured`, and put
+   the signing secret in `RAZORPAY_WEBHOOK_SECRET`. Fulfil from the webhook, not
+   from the browser: a customer can close the tab before `/api/verify` returns.
+
+### Why there is a server at all
+
+GitHub Pages serves static files only. Razorpay order creation requires your
+**secret** key, so the front end cannot do it — hence `server/`. The static
+site stays on Pages; only the API needs a host.
+
+| Host | Notes |
+| --- | --- |
+| [Render](https://render.com) | free web service, simplest, `npm start` equivalent |
+| [Railway](https://railway.app) | free tier, good DX |
+| [Fly.io](https://fly.io) | free allowance, runs worldwide (Razorpay is India-first) |
+| A VM | `node server/index.js` behind nginx |
+
+Start command is `node server/index.js`. Then point the front end at the API by
+setting `data-api-base` on the `<html>` tag:
+
+```html
+<html lang="en" data-api-base="https://vedara-api.onrender.com">
+```
+
+and lock it down with `ALLOWED_ORIGINS=https://amplaytro.github.io` on the
+server. With no `data-api-base` the front end calls its own origin, which is
+what you want when the Node server also serves the files.
+
+### Security properties
+
+- **Prices are never trusted from the client.** The browser sends only
+  `{id, variant, qty}`; `server/catalog.js` re-prices against the same
+  `data.js` the UI loads, so a tampered cart cannot change the amount charged.
+- Payments are verified by HMAC-SHA256 signature *and* by asking Razorpay
+  whether the payment was actually captured, before the cart is cleared.
+- Signatures are compared with `crypto.timingSafeEqual`.
+- Cart size, per-line quantity and total are bounds-checked server-side.
+- The API never serves `server/`, `.env`, dotfiles or `node_modules`, even
+  though they sit inside the static root.
+- The Pages workflow stages the site and excludes server-side source, so the
+  deployed site never publishes backend code.
+
+### Go-live checklist
+
+- [ ] Swap test keys for live keys
+- [ ] Set `ALLOWED_ORIGINS` to your real domain (not `*`)
+- [ ] Register the `/api/webhook` endpoint and fulfil from it
+- [ ] Add order emails / fulfilment on `payment.captured`
+- [ ] Reconcile `payment.failed` and autorelease the Razorpay order
+- [ ] Replace the placeholder product copy, prices and reviews
+
+## Using a different payment provider
+
+`assets/js/checkout.js` owns the `[data-checkout]` button and is the only file
+you need to replace. `cart.js` keeps a fallback that just toasts a message, so
+if you delete `checkout.js` the button degrades politely instead of doing
+nothing. The `/api/orders` + `/api/verify` shape maps cleanly onto Stripe
+PaymentIntents or Shopify's Storefront API.
 
 ## Tests
 
-Three headless checks, run with Node (no packages to install):
+Headless checks, run with Node (no packages to install):
 
 ```powershell
-node cart-test.js        # 42 assertions — pricing, cart maths, persistence
-node filter-test.js      # 36 assertions — facets, price bands, sorting
-node overflow-probe.js   # horizontal overflow at 360–1440px, all pages
+node cart-test.js        # 42 — cart maths, size pricing, persistence
+node filter-test.js      # 36 — facets, price bands, sorting
+node quote-test.js       # 11 — server-side pricing and cart validation
+node globals-test.js     # 11 — duplicate top-level declarations across scripts
+node overflow-probe.js   # 20 — horizontal overflow at 360–1440px
+node payment-visual.js   # 10 — Razorpay wiring in a real browser
+node cart-visual.js      # 25 — cart drawer end to end
 ```
 
-`overflow-probe.js` and `shoot.js` drive Chrome over the DevTools protocol;
-they need Chrome installed and skip gracefully if it is not found.
+`globals-test.js` earns its keep: every file is a classic `<script>`, so they
+share one global scope. A duplicate top-level `const` is a SyntaxError that
+silently deletes a whole feature — that is exactly how `checkout.js` first
+disappeared because it redeclared `money`.
+
+`overflow-probe.js`, `shoot.js`, `payment-visual.js` and `cart-visual.js` drive
+Chrome over the DevTools protocol and need Chrome installed.
 
 ## Notes
 
 - Fully responsive; verified free of horizontal overflow at 360–1440px.
 - Respects `prefers-reduced-motion`.
 - Keyboard accessible: visible focus rings, focus trap in the cart drawer,
-  `aria-expanded` on accordions, `aria-live` on toasts.
+  `aria-expanded` on accordions, `aria-live` on toasts, focus returned on close.
+- No runtime dependencies and no build step — plain files, open and run.
 - Product copy, prices, reviews and the clinical claims are illustrative
   placeholder content — replace before going live.

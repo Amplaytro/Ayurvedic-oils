@@ -414,13 +414,13 @@ document.addEventListener("DOMContentLoaded", () => {
   updateBadges();
 });
 
-/* --- Checkout ----------------------------------------------------------- */
+/* --- Checkout ------------------------------------------------------------ */
+/* The [data-checkout] button is handled by assets/js/checkout.js, which owns
+   the Razorpay flow. That file is optional — without it, fall back to a
+   message rather than doing nothing at all. */
 document.addEventListener("click", (e) => {
   if (!e.target.closest("[data-checkout]")) return;
-  if (!count()) {
-    toast("Your basket is empty");
-    return;
-  }
-  // Wire this to your payment provider (Stripe Checkout, Shopify, etc.).
-  toast(`Demo store — ${count()} item${count() === 1 ? "" : "s"}, ${money(total())}`);
+  if (typeof beginCheckout === "function") return; // checkout.js will handle it
+  e.preventDefault();
+  toast(count() ? "Checkout is not available yet" : "Your basket is empty");
 });

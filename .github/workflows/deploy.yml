@@ -28,11 +28,29 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v6
 
+      - name: Stage static site
+        run: |
+          # Pages publishes whatever we upload. Copy the site into _site,
+          # excluding server-side source, dotfiles (.env, .git) and
+          # node_modules, so nothing server-side is ever published.
+          mkdir -p _site
+          tar -cf - \
+            --exclude='./server' \
+            --exclude='./.git' \
+            --exclude='./.gitignore' \
+            --exclude='./.gitattributes' \
+            --exclude='./.github' \
+            --exclude='./.env' \
+            --exclude='./node_modules' \
+            --exclude='./_site' \
+            . | tar -xf - -C _site
+          echo "Staged files:"
+          find _site -type f | sort
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          # Static site with no build step, so the repository is the artifact.
-          path: .
+          path: _site
           retention-days: 1
 
       - name: Deploy to GitHub Pages
