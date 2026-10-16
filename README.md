@@ -87,17 +87,48 @@ Browser  ──POST /api/orders (ids only)──▶  server  ──Razorpay /v1/
 
 ### Setup
 
-1. Get your keys from **Razorpay Dashboard → Settings → API Keys**. Test keys
-   begin `rzp_test_`. No account yet? Razorpay's test flow works with keys
-   generated from a test-mode account.
-2. Create a local `.env` (see `.env.example`) and fill in `RAZORPAY_KEY_ID` and
-   `RAZORPAY_KEY_SECRET`. `.env` is git-ignored.
-3. Start the server and confirm:
+1. Get your keys from **Razorpay Dashboard → Account & Settings → Developer
+   Controls → API Keys → Generate Key**. Start in **Test mode** — it is
+   available as soon as you sign up, needs no KYC, and is a sandbox where no
+   real money moves. (Live mode additionally needs an OTP to generate keys, and
+   account activation/KYC before you can accept real payments.)
+
+   ⚠️ The **key secret is displayed only once**, at generation time — it is
+   never visible on the dashboard again. Take Razorpay's download at that
+   moment, or regenerate the pair if you lose it.
+
+2. Fill in the two values in `.env` (already created for you; see
+   `.env.example`). **Never paste the secret into a chat, issue or screenshot,
+   and never commit `.env`** — it is git-ignored. `server/index.js` loads `.env`
+   itself, so no dotenv dependency and no extra flags.
+
+3. Verify the keys without printing the secret:
+   ```powershell
+   node key-check.js
+   #   key id    rzp_test_…1a2b  (TEST mode)
+   #   secret    ************  (20 chars, not shown)
+   #   PASS      Credentials are valid.
+   ```
+
+4. Start the server and confirm it picked them up:
    ```powershell
    node server/index.js
-   curl http://localhost:3000/health      # {"ok":true,"payments":true}
+   # [vedara] payments: configured
+   # [vedara] key source: .env
+   # [vedara] key id: rzp_test… (test mode)
    ```
-4. Optional but recommended — add a webhook in the dashboard pointing at
+
+5. Open `http://localhost:3000`, add something to the basket and check out.
+   Razorpay's modal opens with a **Test Mode** ribbon. Useful test cards:
+
+   | Card / UPI | Result |
+   | --- | --- |
+   | `4111 1111 1111 1111` | success — any future expiry, any CVV |
+   | `4000 0000 0000 0002` | failure |
+   | UPI `success@ybl` | success |
+   | UPI `failure@ybl` | failure |
+
+6. Optional but recommended — add a webhook in the dashboard pointing at
    `https://your-api-host/api/webhook`, subscribe to `payment.captured`, and put
    the signing secret in `RAZORPAY_WEBHOOK_SECRET`. Fulfil from the webhook, not
    from the browser: a customer can close the tab before `/api/verify` returns.
