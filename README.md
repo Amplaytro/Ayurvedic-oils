@@ -97,10 +97,17 @@ Browser  ──POST /api/orders (ids only)──▶  server  ──Razorpay /v1/
    never visible on the dashboard again. Take Razorpay's download at that
    moment, or regenerate the pair if you lose it.
 
-2. Fill in the two values in `.env` (already created for you; see
-   `.env.example`). **Never paste the secret into a chat, issue or screenshot,
-   and never commit `.env`** — it is git-ignored. `server/index.js` loads `.env`
-   itself, so no dotenv dependency and no extra flags.
+2. Fill in the two values in `.env` — either open it in any editor, or let the
+   helper do it behind a masked prompt so the secret is never echoed to the
+   screen or typed into a command line:
+
+   ```powershell
+   node setup-keys.js
+   ```
+
+   **Never paste the secret into a chat, issue or screenshot, and never commit
+   `.env`** — it is git-ignored. `server/index.js` loads `.env` itself, so no
+   dotenv dependency and no extra flags.
 
 3. Verify the keys without printing the secret:
    ```powershell
