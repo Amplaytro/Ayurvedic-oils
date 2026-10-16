@@ -29,6 +29,47 @@ const crypto = require('node:crypto');
 
 const { quote, PRODUCTS, CONFIG } = require('./catalog');
 
+/* ---------------------------------------------------------------- .env load */
+
+/**
+ * Minimal .env loader so `node server/index.js` just works with no dotenv
+ * dependency. Real environment variables always win, so host config and this
+ * file cannot silently disagree.
+ */
+function loadEnvFile(file = path.join(__dirname, '..', '.env')) {
+  let raw;
+  try {
+    raw = fs.readFileSync(file, 'utf8');
+  } catch {
+    return false; // no .env — rely on the real environment
+  }
+
+  for (const line of raw.split(/\r?\n/)) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#')) continue;
+
+    const eq = trimmed.indexOf('=');
+    if (eq === -1) continue;
+
+    let key = trimmed.slice(0, eq).trim();
+    if (key.startsWith('export ')) key = key.slice(7).trim();
+
+    let value = trimmed.slice(eq + 1).trim();
+    // Strip matching quotes, if present.
+    if (value.length > 1 &&
+        ((value[0] === '"' && value.endsWith('"')) || (value[0] === "'" && value.endsWith("'")))) {
+      value = value.slice(1, -1);
+    }
+
+    // Never clobber a real env var, and ignore blanks so an unfilled copy of
+    // .env.example cannot blank out a host-provided value.
+    if (value !== '' && process.env[key] === undefined) process.env[key] = value;
+  }
+  return true;
+}
+
+const loadedEnvFile = loadEnvFile();
+
 /* ------------------------------------------------------------------ config */
 
 const PORT = Number(process.env.PORT || 3000);
@@ -368,6 +409,8 @@ server.listen(PORT, () => {
   console.log(`[vedara] listening on http://localhost:${PORT}`);
   console.log(`[vedara] static root: ${STATIC_ROOT}`);
   console.log(`[vedara] payments: ${KEY_ID && KEY_SECRET ? 'configured' : 'NOT configured'}`);
+  console.log(`[vedara] key source: ${loadedEnvFile ? '.env' : 'environment variables'}`);
+  if (KEY_ID) console.log(`[vedara] key id: ${KEY_ID.slice(0, 8)}… (${KEY_ID.startsWith('rzp_test_') ? 'test' : KEY_ID.startsWith('rzp_live_') ? 'LIVE' : 'unknown mode'})`);
   console.log(`[vedara] allowed origins: ${ALLOWED_ORIGINS.join(', ')}`);
 });
 
